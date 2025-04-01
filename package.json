@@ -12,7 +12,11 @@
     "vue-router": "4.5.0"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
     "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-service": "~5.0.0"
+    "@vue/cli-plugin-typescript": "^5.0.8",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "^5.8.2"
   }
 }
