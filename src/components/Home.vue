@@ -1,69 +1,91 @@
 <template>
-  <div class="main-container">
-    <div class="background-layer"></div>
-    <div class="first-child">
-      <!-- 新增顶部导航栏 -->
-      <nav class="header">
-        <div class="logo">DeepSeek</div>
-        <div class="nav-items">
-          <a href="#">产品</a>
-          <a href="#">解决方案</a>
-          <a href="#">定价</a>
-          <router-link to="/doc">开始使用</router-link>
-        </div>
-      </nav>
+  <div class="first-child">
+    <div class="header">
+      <div class="logo">DeepSeek</div>
+      <div class="nav-items">
+        <a href="#" style="text-decoration:underline;font-weight: 700;">API 开放平台 ↗</a>
+        <a href="#">English</a>
+      </div>
+    </div>
+    <div class="body">
+      <div class="background-layer" />
       <div class="banner">
         <p>🎉 DeepSeek-V3 模型更新，各项能力全面进阶，在网页端、APP 和 API 全面上线，点击查看详情。</p>
         <h1>DeepSeek</h1>
         <h2>探索未知的世界</h2>
       </div>
-      <div class="container">
+      <div class="BannerCard">
         <router-link to="/doc">
           <div class="text-xl">
             <div class="font-bold">开始对话</div>
-            <div class="text-slate">与DeepSeek-V3 和 R1 免费对话体验全新旗舰模型</div>
+            <div class="text-slate-500">与DeepSeek-V3 和 R1 免费对话<br>体验全新旗舰模型</div>
           </div>
         </router-link>
         <router-link to="/qr">
           <div class="text-xl">
             <div class="font-bold">获取手机 App</div>
-            <div class="text-slate">DeepSeek 官方推出的免费 AI 助手搜索写作阅读解题翻译工具</div>
+            <div class="text-slate-500">DeepSeek 官方推出的免费 AI 助手 <br>搜索写作阅读解题翻译工具</div>
           </div>
         </router-link>
       </div>
-      <div class="footer">
-        <!-- 新增页脚内容 -->
-        <p>© 2024 DeepSeek. All rights reserved.</p>
+    </div>
+    <div class="footer">
+      <div class="text-slate-700">
+        <div class="text-1">DeepSeek</div>
+        <a href="" class="text-1-1">2ogo</a>
+        <a href="" class="text-1-1">© 2025 杭州深度求索人工智能基础技术研究有限公司 版权所有</a>
+        <a href="" class="text-1-1">浙ICP备2023025841号</a>
+        <a href="" class="text-1-1">浙B2-20250178</a>
+        <a href="" class="text-1-1">浙公网安备33010502011812号</a>
+      </div>
+      <div class="text-slate-700">
+        <div class="text-1">研究</div>
+        <a href="#" class="text-1-2">DeepSeek R1</a>
+        <a href="#" class="text-1-2">DeepSeek V3</a>
+        <a href="#" class="text-1-2">DeepSeek Coder V2</a>
+        <a href="#" class="text-1-2">DeepSeek VL</a>
+        <a href="#" class="text-1-2">DeepSeek V2</a>
+        <a href="#" class="text-1-2">DeepSeek Coder</a>
+        <a href="#" class="text-1-2">DeepSeek Math</a>
+        <a href="#" class="text-1-2">DeepSeek LLM</a>
+      </div>
+      <div class="text-slate-700">
+        <div class="text-1">产品</div>
+        <a href="#" class="text-1-2">DeepSeek App</a>
+        <a href="#" class="text-1-2">DeepSeek 网页版</a>
+        <a href="#" class="text-1-2">开放平台</a>
+        <a href="#" class="text-1-2">API 价格</a>
+        <a href="#" class="text-1-2">服务状态</a>
+      </div>
+      <div class="text-slate-700">
+        <div class="text-1">法务&安全</div>
+        <a href="#" class="text-1-2">隐私政策</a>
+        <a href="#" class="text-1-2">用户协议</a>
+        <a href="#" class="text-1-2">反馈安全漏洞</a>
+      </div>
+      <div class="text-slate-700">
+        <div class="text-1">加入我们</div>
+        <a href="#" class="text-1-2">岗位详情</a>
       </div>
     </div>
   </div>
 </template>
 
 <style>
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 a {
   text-decoration: none;
-}
-
-.background-layer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('/src/assets/banner-background.webp') center/cover no-repeat fixed;
-  z-index: -1;
-  /* 确保在内容层下方 */
-}
-
-.main-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  background-color: transparent;
+  color: inherit;
 }
 
 h1 {
   color: rgb(50, 137, 255);
-  width: 320px;
+  width: 100%;
   font-size: 60px;
   padding: 20px 0 20px 0;
   margin: 0;
@@ -71,27 +93,95 @@ h1 {
 
 h2 {
   color: rgb(71, 85, 105);
-  width: 2000px;
+  width: 100%;
   font-size: 30px;
   padding: 0 0 60px 0;
   margin: 0;
 }
 
-.banner {
-  padding: 60px;
+p {
+  color: rgb(148, 163, 184);
+}
+
+.background-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  background: url('/src/assets/banner-background.webp') bottom/cover no-repeat;
+  z-index: -1;
+}
+
+.first-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  padding: 0;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.body {
+  position: relative;
+  z-index: 0;
+  margin: 0;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  position: relative;
+  justify-content: center;
+  min-height: calc(100vh - 140px);
+  padding-bottom: 60px;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+.banner {
   width: 100%;
-  height: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.BannerCard {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-xl {
+  display: flex;
+  flex-direction: column;
+  width: 304px;
+  height: 81px;
+  padding: 24px 32px 28px 32px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: white;
 }
 
 .font-bold {
@@ -101,29 +191,51 @@ h2 {
   padding: 0 0 8px 0;
 }
 
-.text-xl {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  width: 368px;
-  height: 133px;
-  padding: 24px 32px 28px 32px;
-  border: 1px solid #e5e7eb;
-  border-radius: 24px;
-}
-
-.text-slate {
+.text-slate-500 {
   color: rgb(115, 130, 151);
   font-size: 16px;
   padding: 0 0 16px 0;
 }
 
 .footer {
-  padding: 20px;
-  background: #f3f4f6;
-  text-align: center;
-  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 0;
+  background: white;
+  position: relative;
+  z-index: 1;
+}
+
+.text-slate-700 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.text-1{
+  font-weight: 700
+}
+.text-1-1{
+  font-size: 16px;
+  color: rgb(148, 163, 184); 
+}
+.tetx-1-2{
+  font-size: 16px;
+  color: rgb(71, 85, 105);
+}
+
+@media (max-width: 768px) {
+  .BannerCard {
+    flex-direction: column;
+    padding: 0 20px;
+  }
   
+  .text-xl {
+    width: 100%;
+    max-width: 400px;
+  }
+  .footer {
+    flex-direction: column;
+    padding: 20px 20px;
+  }
 }
 </style>
