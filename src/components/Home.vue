@@ -1,5 +1,6 @@
 <template>
   <div class="first-child">
+    <div class="background-layer" />
     <div class="header">
       <div class="logo">DeepSeek</div>
       <div class="nav-items">
@@ -8,9 +9,8 @@
       </div>
     </div>
     <div class="body">
-      <div class="background-layer" />
       <div class="banner">
-        <p>🎉 DeepSeek-V3 模型更新，各项能力全面进阶，在网页端、APP 和 API 全面上线，点击查看详情。</p>
+        <p style="color: rgb(148, 163, 184);">🎉 DeepSeek-V3 模型更新，各项能力全面进阶，在网页端、APP 和 API 全面上线，点击查看详情。</p>
         <h1>DeepSeek</h1>
         <h2>探索未知的世界</h2>
       </div>
@@ -72,11 +72,13 @@
 </template>
 
 <style>
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
+
 a {
   text-decoration: none;
   background-color: transparent;
@@ -99,19 +101,14 @@ h2 {
   margin: 0;
 }
 
-p {
-  color: rgb(148, 163, 184);
-}
-
 .background-layer {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  height: auto;
-  background: url('/src/assets/banner-background.webp') bottom/cover no-repeat;
-  z-index: -1;
+  background: url('/src/assets/banner-background.webp') top/contain no-repeat;
+  z-index: 0;
 }
 
 .first-child {
@@ -120,7 +117,6 @@ p {
   flex-direction: column;
   position: relative;
   min-height: 100vh;
-  width: 100%;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -136,23 +132,30 @@ p {
   z-index: 1;
 }
 
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  color: rgb(50, 137, 255);
+  font-weight: bold;
+}
+
 .nav-items {
   display: flex;
   justify-content: flex-end;
   gap: 20px;
+  padding: 10px 20px;
 }
 
 .body {
   position: relative;
-  z-index: 0;
-  margin: 0;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 140px);
   padding-bottom: 60px;
+  z-index: 1;
 }
 
 .banner {
@@ -200,7 +203,7 @@ p {
 .footer {
   display: flex;
   justify-content: space-around;
-  padding: 60px 0;
+  padding: 40px 0;
   background: white;
   position: relative;
   z-index: 1;
@@ -211,14 +214,17 @@ p {
   flex-direction: column;
   gap: 5px;
 }
-.text-1{
+
+.text-1 {
   font-weight: 700
 }
-.text-1-1{
+
+.text-1-1 {
   font-size: 16px;
-  color: rgb(148, 163, 184); 
+  color: rgb(148, 163, 184);
 }
-.tetx-1-2{
+
+.tetx-1-2 {
   font-size: 16px;
   color: rgb(71, 85, 105);
 }
@@ -228,11 +234,12 @@ p {
     flex-direction: column;
     padding: 0 20px;
   }
-  
+
   .text-xl {
     width: 100%;
     max-width: 400px;
   }
+
   .footer {
     flex-direction: column;
     padding: 20px 20px;
